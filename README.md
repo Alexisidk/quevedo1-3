@@ -1,3 +1,6 @@
+Y ESTA PUTA MIERDA?
+
+
 import time
 import random
 
