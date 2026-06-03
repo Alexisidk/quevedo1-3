@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>No abras esto 😨</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    #inicio {
+      font-size: 1.5rem;
+      text-align: center;
+      animation: parpadeo 1s infinite;
+    }
+
+    @keyframes parpadeo {
+      0% { opacity: 1; }
+      50% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    #susto {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: red;
+      color: black;
+      font-size: 3rem;
+      font-weight: bold;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+
+<div id="inicio">
+  NO ABRAS ESTO...<br>
+  (en serio)
+</div>
+
+<div id="susto">
+  😱 TE ATRAPÉ putita 😱
+  <br><br>
+  ERA UNA BROMA
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("susto").style.display = "flex";
+
+    // sonido tipo susto (opcional)
+    const audio = new Audio("https://www.soundjay.com/human/sounds/scream-01.mp3");
+    audio.play().catch(() => {});
+  }, 3000);
+</script>
+
+</body>
+</html> 
